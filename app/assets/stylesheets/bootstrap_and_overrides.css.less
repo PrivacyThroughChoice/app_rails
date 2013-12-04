@@ -1,0 +1,115 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings");
+@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+// Adjust the padding for the top bar
+body {
+  padding-top: 110px;
+  padding-bottom: 60px;
+}
+
+.navbar .nav {
+    display: block;
+    height: 60px;
+    float: left;
+    left: 0;
+    margin: 36px 10px 0 0;
+    position: relative;
+}
+
+input.edit-btn-large {
+   font-size: 17.5px;
+   padding: 11px 19px;
+}
+
+.summary {
+  border: 2px dashed #e0e0e0;
+  padding: 10px;
+}
+
+.summary-table {
+  width: 100%;
+}
+
+.summary-table td {
+  vertical-align: top;
+  width: 33%;
+}
+
+.summary-table td.left {
+  vertical-align: top;
+  padding: 0px 10px 0px 0px;
+  text-align: right;
+  width: 34%;
+}
+
+.block {
+  padding: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  vertical-align: middle;
+  font-size: 2em;
+}
+
+.bad-block {
+  background-color: #F8E0E0;
+}
+
+.good-block {
+  background-color: #E6F8E0;
+}
+
+.neutral-block {
+  background-color: #D0D0D0;
+}
+
+a.btn:visited { color: #333; }
+a.btn-danger:visited { color: #fff; }
+a.btn-primary:visited { color: #fff; }
+
+.muted a { color: #999999; }
+.muted a:visited { color: #999999; }
+.muted a:hover { color: #FFF; }
+
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }
+
+.mission {
+  font-weight: bold;
+}
+
+.twell {
+  background-color: white;
+  border: 2px dashed #e0e0e0;
+  padding: 20px;
+  min-height: 200px;
+}

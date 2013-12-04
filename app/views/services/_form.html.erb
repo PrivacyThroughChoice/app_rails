@@ -1,0 +1,83 @@
+<%= form_for @service, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field span5' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'text_field span5', :rows => 3 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :tags, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tag_list, :class => 'text_field span5' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :url, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :url, :class => 'text_field span5' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :hosting_provider, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :hosting_provider, :class => 'text_field span5' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :country, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.country_select :country %>
+    </div>
+  </div>
+
+  <p>Please note: Screenshots are grabbed automatically when saved and should show up within a couple of minutes.</p>
+
+  <% @report_categories.all(:order => :name).each do |category| %>
+    <div class="block neutral-block"><%= category.name %></div>
+    <% category.report_items.each do |item| %>
+      <h4><%= item.name %></h4>
+      <p class="muted"><%= item.help %></p>
+      <% item.report_choices.all(:order => "bonus, points").each do |choice| %>
+        <% c = choice.points >= 0 ? "text-success" : "text-error" %>
+        <%= f.fields_for :answers, choice.answers.find_or_initialize_by(service: @service) do |a| %>
+          <div class="row">
+            <div class="span1">
+              <span class="pull-right"><%= a.check_box :selected %></span>
+            </div>
+            <div class="span5">
+              <strong class="<%= c %>"><%= choice.name %></strong>
+            </div>
+            <div class="span2">
+              <strong class="<%= c %> pull-right"><%= choice.points %><%= " bonus" if choice.bonus %> points</strong>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span7 offset1">
+              <p class="muted"><%= choice.help %></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span7 offset1">
+              <%= a.text_area :notes, :class => "field span7", :rows => "1", :placeholder => "Optional notes"%>
+            </div>
+          </div>
+          <br/>
+          <%= a.hidden_field :service_id, :value => @service.id %>
+          <%= a.hidden_field :report_choice_id, :value => choice.id %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                services_path, :class => 'btn' %>
+  </div>
+<% end %>

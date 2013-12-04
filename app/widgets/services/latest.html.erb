@@ -1,0 +1,11 @@
+<%= widget_div do %>
+<div class="well twell">
+  <h4>Latest services</h4>
+  <ul class="unstyled">
+    <% @services.each do |service| %>
+    <% c = (10 * service.score).round >= 6 ? "good-block" : "bad-block" %>
+    <li><span class="<%= c %>"><%= (10 * service.score).round %>/10</span> <strong><%= link_to service.name, service_path(service) %></strong></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>

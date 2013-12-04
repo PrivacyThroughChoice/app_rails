@@ -1,0 +1,107 @@
+<div class="row">
+  <div class="span12">
+
+    <h2>What is <%= site_name %>?</h2>
+    <p><%= site_name %> is a community-driven project that aims to bring transparency to the security of online services.</p>
+    <p>New cloud-based web applications, site and services go live everyday, and more of our lives are being moved into the cloud. New companies barely a few months old are suddenly entrusted with your personal data. Long established services may have a history of privacy breaches or unsatisfactory behaviour with regards to safeguarding your personal data.</p>
+    <p><%= site_name %> is a way to bring this information together to allow you to make an informed choice on whether to use a service, or which of several competing services to use. Most services are happy to shout about their amazing features and this site aims to bridge the gap between the marketing material and reality.</p>
+    <hr/>
+
+    <h2>Our mission</h2>
+    <ul>
+      <li class="mission">Promote internet security awareness</li>
+      <li class="mission">Encourage transparency from services regarding their security implementations and how they handle personal data</li>
+      <li class="mission">Provide a tool that allows people to make better informed decisions regarding their personal data</li>
+      <li class="mission">Give service owners the opportunity to address issues that the public is not happy with</li>
+    </ul>
+    <hr/>
+
+    <h2>Community-driven you say?</h2>
+
+    <h6>Independent</h6>
+    <p><%= site_name %> is an independent project, not linked to any companies. It was created by people that want to see improvements in the security of online services and acts in the interest of the community.</p>
+
+    <h6>Open Source</h6>
+    <p>This source code to this site is fully open sourced and is available on our <a href="http://github.com">Github</a> page.</p>
+    <p>All <%= site_name %> material is release under the <a href="#">Badger License</a>.</p>
+
+    <h6>Moderators</h6>
+    <p>In order to prevent abuse such as spam, misuse or biased reports, services and related data go through a process of moderation.</p>
+
+    <h6>Services added by users just like you</h6>
+    <p>If you can't find the service you're looking for, you can help contribute by logging in and adding the it. Fill in as much detail as possible, and the moderates will take care of the rest.</p>
+
+    <h6>Transparent</h6>
+    <p>We try to set the standard, so every aspect of this site is as open as possible.</p>
+    <hr/>
+
+    <h2>How are scores generated?</h2>
+    <h6>Scores</h6>
+    <p>TODO - Description of calculations :)</p>
+    <h6>Report data</h6>
+    <p>TODO - Describe report data</p>
+    <ul>
+      <li><%= link_to "Report Categories", report_categories_path %></li>
+      <li><%= link_to "Report Items", report_items_path %></li>
+      <li><%= link_to "Report Choices", report_choices_path %></li>
+    </ul>
+    <hr/>
+
+    <h2>Who is this site for?</h2>
+    <h6>Everyone</h6>
+    <p>Users of the service, Service comparison, informed decisions</p>
+    <h6>Tech and infosec pros</h6>
+    <p>Main contributers, people that are passionate about their industry and feel a sense of responsibility for shaping the future for the better.</p>
+    <h6>Service owners and decision makers</h6>
+    <p>Owners that find their services on this site can learn from feedback. Look at what others are doing well, and what others are doing wrong to be proactive.</p>
+    <hr/>
+
+    <h2>Road map</h2>
+    <p><%= site_name %> is in the very early stages of development and our aim is to become fully community-driven. The site is under constant development with many new features to be rolled out as time.
+    <ul>
+      <li>Phase 1 - Getting Started - Available to everyone but with fixed moderators</li>
+      <li>Phase 2 - Community-driven - Fixed moderated replaced by a system of reputation and merit</li>
+      <li>Phase 3 - Social - Enhanced usability such as "following" sites</li>
+      <li>Phase 4 - ??? - We're driven by feedback from the community. The future of <%= site_name %> has yet to be determinted</li>
+    </ul>
+    <hr/>
+
+    <h2>Want to help out?</h2>
+    <p>You can help out by:</p>
+    <ul>
+      <li>Adding new sites</li>
+      <li>Providing feedback on this page</li>
+      <li>Submitting issues on our github project here</li>
+      <li>Submitting patches on our github project here</li>
+      <li>Adding comments to services etc to help build the community</li>
+      <li>Promoting this site and spreading the word</li>
+    </ul>
+    <hr/>
+
+    <h2>What does thunr mean?</h2>
+    <p><strong>thunr</strong> is derived from the Old Saxon name <em>thunar</em> for <a href="http://en.wikipedia.org/wiki/Thor">Thor</a>, the god of thunder, lightning and the protection of mankind.</p>
+    <hr/>
+
+    <h2>Who created <%= site_name %>?</h2>
+    <p>This site was originally created by @zeroXten, with code contributions from TheJH and ideas from XXX and YYY.</p>
+    <p>See the <%= link_to "Thank You", page_path('thankyou') %> page for everyone who has helped.</p>
+    <hr/>
+
+    <h2>Have something to say?</h2>
+    <p>You you can leave feedback using the Disqus comments below. This allows you to sign in to Discus using Disqus, Twitter, Facebook etc without having to sign up at <%= site_name %> first. All feedback is welcome, good or bad, as long as it is constructive and unoffensive.</p>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+       var disqus_shortname = 'thunr'; // required: replace example with your forum shortname
+
+       /* * * DON'T EDIT BELOW THIS LINE * * */
+       (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+       })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div> 

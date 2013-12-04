@@ -1,0 +1,41 @@
+<div class="row">
+  <div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+  <!-- Carousel items -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag("carousel-1.png") %>
+        <div class="carousel-caption">
+          <h4>Bringing transparency to the Cloud</h4>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag("carousel-2.png") %>
+        <div class="carousel-caption">
+          <h4>Community driven</h4>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+</div>
+
+<div class="row">
+  <%= render 'shared/search' %>
+</div>
+
+<div class="row">
+  <div class="span6">
+    <%= render_widget :services, :latest %>
+  </div>
+  <div class="span6">
+    <%= render_widget :services, :cloud %>
+  </div>
+</div>

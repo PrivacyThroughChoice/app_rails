@@ -1,0 +1,13 @@
+<%- model_class = Service -%>
+<%= render 'shared/search' %>
+
+<%= render 'list' %>
+<%= paginate @services %>
+
+<p>Can't find the service you're looking for? Help out by adding it.</p>
+<% if user_signed_in? %>
+<%= link_to 'Add a new service', new_service_path, :class => 'btn btn-primary' %>
+<% else %>
+<%= link_to 'Sign Up', new_user_registration_path, :class => 'btn btn-primary' %>
+<% end %>
+</div>
