@@ -36,7 +36,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -87,13 +87,13 @@ gem 'acts-as-taggable-on'
 # Widget
 gem 'apotomo'
 
-group :development do
-  gem 'capistrano', '~> 3.0.0'
-end
+#group :development do
+#  gem 'capistrano', '~> 3.0.0'
+#end
 
-group :production do
+#group :production do
   # Web stack
-  gem 'puma'
-end
+  #gem 'puma'
+#end
 
 
