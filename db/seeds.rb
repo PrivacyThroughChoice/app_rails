@@ -1,23 +1,23 @@
 user = User.create(
   username: "user",
   email: "user@example.com",
-  password: "changeme",
-  password_confirmation: "changeme"
+  password: "password",
+  password_confirmation: "password"
 )
 
 mod = User.create(
   username: "mod",
   email: "mod@example.com",
-  password: "changeme",
-  password_confirmation: "changeme",
+  password: "password",
+  password_confirmation: "password",
   moderator: true
 )
 
 admin = User.create(
   username: "admin",
   email: "admin@example.com",
-  password: "changeme",
-  password_confirmation: "changeme",
+  password: "password",
+  password_confirmation: "password",
   admin: true
 )
 
@@ -221,6 +221,8 @@ services = []
   service = Service.create(
     name: "Test service #{i}",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis eros, at faucibus sem. Maecenas in metus iaculis, fermentum enim a",
+    screenshot_url: "_na.png",
+    url: "http://google.com",
     country: "United Kingdom",
     hosting_provider: "Badger Inc",
     score: 0.0,

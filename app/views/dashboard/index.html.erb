@@ -1,29 +1,31 @@
 <div class="row">
-  <div id="myCarousel" class="carousel slide">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
-  <!-- Carousel items -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <%= image_tag("carousel-1.png") %>
-        <div class="carousel-caption">
-          <h4>Bringing transparency to the Cloud</h4>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag("carousel-2.png") %>
-        <div class="carousel-caption">
-          <h4>Community driven</h4>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-        </div>
-      </div>
+  <div class="span6">
+    <div class="well">
+      <h1>We need your help!</h1>
+      <p>Thunr.com is a community-driven project that aims to bring transparency to the security and privacy of online services.</p>
+      <p>We're looking for following people to help:</p>
+      <ul>
+        <li>Infosec gurus - code review and pentest</li>
+        <li>Infosec and privacy peeps - build up the review data (catagories, items, choices)</li>
+        <li>Rails developers - fix and improve the code, write unit tests etc.</li>
+        <li>Front-end developers - make it pretty and usable</li>
+        <li>DevOps engineers - improve the chef code, write tests</li>
+        <li>Community evangelists - spread the word and help build the community</li>
+        <li>Wordsmiths - improve the text and write documentation</li>
+      </ul>
+      <p>If you can help, drop an email to <%= mail_to("dev@thunr.com") %></p>
     </div>
-    <!-- Carousel nav -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+  <div class="span6">
+    <div class="well">
+      <h1>Preview mode</h1>
+      <p>Thunr.com is currently running in preview mode, which means it is automatically wiped every day. So feel free to have a play. Users are as follows:</p>
+      <ul>
+        <li>user@example.com / password</li>
+        <li>mod@example.com / password</li>
+        <li>admin@example.com / password</li>
+      </ul>
+    </div>
   </div>
 </div>
 
