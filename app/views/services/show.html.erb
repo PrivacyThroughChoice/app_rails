@@ -1,7 +1,7 @@
 <%- model_class = Service -%>
 <%= render 'shared/search' %>
 
-<h1>Security report for <%= link_to @service.name, @service.url %></h1>
+<h1>Security report for <%= link_to @service.name, "http://thunr.com" %></h1>
 <p class="muted">Last updated <%= @service.updated_at %>, added by <%= @service.user.username %>
 <% if can? :manage, @service %>
 <% if not @service.moderated? %>
