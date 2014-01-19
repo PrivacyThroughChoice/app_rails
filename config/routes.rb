@@ -15,6 +15,7 @@ WebnarkRails::Application.routes.draw do
   get '/services/:id/full', to: 'services#full', as: :full_report
   post "/services/add_comment" => "services#add_comment", :as => "add_comment_to_services", :via => [:services]
   get '/services/unmoderated', to: 'services#unmoderated', as: :unmoderated_services
+  get '/services/all', to: 'services#all', as: :all_services
   get '/services/flagged', to: 'services#flagged', as: :flagged_services
   get '/services/:id/report', to: 'services#report', as: :report_service
   get '/services/:id/moderate', to: 'services#moderate', as: :moderate_service

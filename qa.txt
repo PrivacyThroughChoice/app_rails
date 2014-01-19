@@ -1,0 +1,33 @@
+General
+-------
+
+1) Can log in
+2) Can log out
+3) Cannot register
+
+Guest
+-----
+
+1) Can search moderated as guest
+2) Can view moderated as guest
+3) Cannot view unmoderated as guest
+
+User
+----
+
+1) Can create service
+2) Can edit own unmoderated service
+3) Cannot edit own moderated service
+4) Cannot edit other user's service
+
+Moderator
+---------
+
+1) Can moderate a service
+2) 
+
+Admin
+-----
+
+1) Can manage services
+2) Can manage reports etc

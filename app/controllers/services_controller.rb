@@ -18,12 +18,17 @@ class ServicesController < ApplicationController
 
   before_action :calculate_score, only: [:show, :full]
   after_action :calculate_score, only: [:create, :update]
-  after_action :get_screenshot, only: [:create, :update]
+  #after_action :get_screenshot, only: [:create, :update]
 
   # GET /services
   # GET /services.json
   def index
     @services = Service.moderated.page(params[:page])
+  end
+
+  def all
+    @services = Service.page(params[:page])
+    render :index
   end
 
   def search
@@ -287,6 +292,9 @@ class ServicesController < ApplicationController
         params[:service][:moderated] = false
       end
 
+      # Force the user id
+      params[:service][:user_id] = current_user.id
+
       params.require(:service).permit(
         :name, 
         :description, 
@@ -296,6 +304,8 @@ class ServicesController < ApplicationController
         :hosting_provider, 
         :country, 
         :screenshot_url,
+        :moderated,
+        :user_id,
         :answers_attributes => [:id, :service_id, :notes, :report_choice_id, :selected, '_destroy'],
       )
     end
