@@ -4,8 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Database
-gem 'sqlite3', group: [:development, :test]
-gem 'mysql', group: [:production]
+gem 'mysql'
 
 # Web
 gem 'unicorn'
