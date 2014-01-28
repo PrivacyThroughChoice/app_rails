@@ -33,7 +33,7 @@ class ServicesController < ApplicationController
 
   def search
     # TODO - make this a scope
-    services_name = Service.where("(name LIKE ? OR url LIKE ?) AND moderated = 't'", "%#{params[:query]}%", "%#{params[:query]}%")
+    services_name = Service.where("(name LIKE ? OR url LIKE ?) AND moderated = TRUE", "%#{params[:query]}%", "%#{params[:query]}%")
     services_tags = Service.moderated.tagged_with(params[:query])
     @services = Kaminari.paginate_array(services_name + services_tags).page(params[:page])
     render :index
