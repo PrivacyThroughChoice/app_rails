@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Database
+gem 'sqlite3'
 gem 'mysql'
 
 # Web
@@ -84,3 +85,6 @@ gem 'acts-as-taggable-on'
 # Widget
 gem 'apotomo'
 
+# IP lookup
+gem 'geoip'
+gem 'ipaddress'

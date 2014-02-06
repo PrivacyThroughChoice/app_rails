@@ -32,7 +32,7 @@
   <div class="control-group">
     <%= f.label :country, :class => 'control-label' %>
     <div class="controls">
-      <%= f.country_select :country %>
+      <%= f.country_select :country, [ @user_country, 'United Kingdom', 'United States'].uniq %>
     </div>
   </div>
 
@@ -59,6 +59,7 @@
           </div>
           <div class="row">
             <div class="span7 offset1">
+              <p><%= choice.description %></p>
               <p class="muted"><%= choice.help %></p>
             </div>
           </div>

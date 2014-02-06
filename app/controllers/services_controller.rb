@@ -10,6 +10,7 @@ class ServicesController < ApplicationController
 
   # The order matters
   #before_filter :authenticate_user!
+  before_action :user_country, only: [ :new, :edit ]
   before_action :set_service, only: [ :show, :full, :edit, :update, :destroy, :report, :unreport, :moderate ]
   load_and_authorize_resource
   rescue_from CanCan::AccessDenied do |exception|
@@ -19,6 +20,15 @@ class ServicesController < ApplicationController
   before_action :calculate_score, only: [:show, :full]
   after_action :calculate_score, only: [:create, :update]
   #after_action :get_screenshot, only: [:create, :update]
+
+  def user_country
+    if IPAddress("10.0.0.0/8").include?(IPAddress(request.remote_ip)) or IPAddress("172.16.0.0/12").include?(IPAddress(request.remote_ip)) or IPAddress("192.168.0.0/16").include?(IPAddress(request.remote_ip)) or IPAddress("127.0.0.0/8").include?(IPAddress(request.remote_ip)) then
+      @user_country = "United Kingdom"
+    else
+      @geoip ||= GeoIP.new("#{Rails.root}/db/GeoLiteCity.dat")
+      @user_country = @geoip.country(request.remote_ip).country_name
+    end
+  end
 
   # GET /services
   # GET /services.json
