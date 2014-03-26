@@ -39,7 +39,7 @@
   <p>Please note: Screenshots are grabbed automatically when saved and should show up within a couple of minutes.</p>
 
   <% @report_categories.all(:order => :name).each do |category| %>
-    <div class="block neutral-block"><%= category.name %></div>
+    <div class="block neutral-block"><%= image_tag(category.icon_url) %> <%= category.name %></div>
     <% category.report_items.each do |item| %>
       <h4><%= item.name %></h4>
       <p class="muted"><%= item.help %></p>

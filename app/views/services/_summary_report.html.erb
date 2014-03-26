@@ -2,14 +2,14 @@
 <ul class="nav nav-list">
 
 <% @bad.each do |answer| %>
-  <li><i class="icon-remove"></i><span class="text-error"> <%= answer.name %></span></li>
+  <li><i class="icon-remove"></i><span class="text-error"> <%= answer.report_item.report_category.name %> - <%= answer.report_item.name %> - <%= answer.name %></span></li>
 <% end %>
 </ul>
 <h3>Job well done </h3>
 
 <ul class="nav nav-list">
 <% @good.each do |answer| %>
-  <li><i class="icon-ok"></i><span class="text-success"> <%= answer.name %></span></li>
+  <li><i class="icon-ok"></i><span class="text-success"> <%= answer.report_item.report_category.name %> - <%= answer.report_item.name %> - <%= answer.name %></span></li>
 <% end %>
 </ul>
 

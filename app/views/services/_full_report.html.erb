@@ -8,7 +8,7 @@
  <hr/>
  <% c = answer.report_choice.points >= 0 ? "text-success" : "text-error" %>
  <p class="<%= c %>"><%= answer.report_choice.name %> <span class="pull-right"><%= answer.report_choice.points %> <%= "bonus " if answer.report_choice.bonus %>points</span></p>
- <p><%= answer.report_choice.description %></p>
+ <p class="muted"><%= answer.report_choice.description %></p>
  <blockquote><%= answer.notes %></blockquote>
 <% end %>
 

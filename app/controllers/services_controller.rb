@@ -57,7 +57,7 @@ class ServicesController < ApplicationController
     @service.answers.each do |answer|
       if answer.report_choice.points > 0
         @good << answer.report_choice
-      else
+      elsif answer.report_choice.points < 0
         @bad << answer.report_choice
       end
     end

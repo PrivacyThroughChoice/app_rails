@@ -1,3 +1,5 @@
+<p>Note: Please ensure the descriptions are self-contained statements of fact about the service. They are used throughout the site. For example...</p>
+<hr/>
 <%= form_for @report_choice, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :report_item_id, :class => 'control-label' %>
@@ -9,6 +11,12 @@
     <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'text_field span6', :rows => 3 %>
     </div>
   </div>
   <div class="control-group">
