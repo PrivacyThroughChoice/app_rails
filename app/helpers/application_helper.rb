@@ -1,6 +1,6 @@
 module ApplicationHelper
   def site_name
-    "PrivacyThroughChoice.org"
+    "Privacy Through Choice"
   end
   include ActsAsTaggableOn::TagsHelper
 end

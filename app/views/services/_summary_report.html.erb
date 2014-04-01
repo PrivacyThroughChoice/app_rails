@@ -1,15 +1,15 @@
 <h3>Needs improvement</h3>
 <ul class="nav nav-list">
 
-<% @bad.each do |answer| %>
-  <li><i class="icon-remove"></i><span class="text-error"> <%= answer.report_item.report_category.name %> - <%= answer.report_item.name %> - <%= answer.name %></span></li>
+<% @bad.each do |report_choice| %>
+  <li><i class="icon-remove"></i><span class="text-error"> <%= report_choice.description %></span></li>
 <% end %>
 </ul>
 <h3>Job well done </h3>
 
 <ul class="nav nav-list">
-<% @good.each do |answer| %>
-  <li><i class="icon-ok"></i><span class="text-success"> <%= answer.report_item.report_category.name %> - <%= answer.report_item.name %> - <%= answer.name %></span></li>
+<% @good.each do |report_choice| %>
+  <li><i class="icon-ok"></i><span class="text-success"> <%= report_choice.description %></span></li>
 <% end %>
 </ul>
 

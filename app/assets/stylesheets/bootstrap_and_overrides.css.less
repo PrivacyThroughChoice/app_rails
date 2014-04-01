@@ -29,20 +29,39 @@
 // Example:
 // @linkColor: #ff0000;
 
+@ptcGreen: #009A31;
+@linkColor: @ptcGreen;
+
+@dropdownLinkBackgroundHover: @ptcGreen;
+@navbarHeight: 50px;
+
+@font-face {
+  font-family: 'SketchMe';
+  src:url('sketch-me__FREE-version.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 // Adjust the padding for the top bar
 body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-//.navbar .nav {
-    //display: block;
-    //height: 40px;
-    //float: left;
-    //left: 0;
-    //margin: 36px 10px 0 0;
-    //position: relative;
-//}
+.navbar .brand {
+  color: #222;
+  font-family: 'SketchMe';
+  font-size: 40px;
+}
+
+a:hover.brand {
+  background-color: transparent;
+}
+
+.navbar .brand-green {
+  color: @ptcGreen;
+}
 
 input.edit-btn-large {
    font-size: 17.5px;
@@ -78,6 +97,10 @@ input.edit-btn-large {
   font-size: 2em;
 }
 
+h1 {
+  color: @ptcGreen;
+}
+
 .bad-block {
   background-color: #F8E0E0;
 }
@@ -104,6 +127,7 @@ a.btn-primary:visited { color: #fff; }
 .css4 { font-size: 1.6em; }
 
 .mission {
+  color: @ptcGreen;
   font-weight: bold;
 }
 
@@ -113,3 +137,4 @@ a.btn-primary:visited { color: #fff; }
   padding: 20px;
   min-height: 200px;
 }
+

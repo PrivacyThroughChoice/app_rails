@@ -181,8 +181,8 @@ ReportChoice.create(
 )
 ReportChoice.create(
   report_item_id: item.id, 
-  name: "OAuth",
-  description: "OAuth available for authorisation",
+  name: "O-Auth",
+  description: "O-Auth available for authorisation",
   bonus: true,
   points: 25,
   help: ''
@@ -500,7 +500,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not applicable",
-  description: "",
+  description: "Data encryption is not applicable",
   bonus: false,
   points: 0,
   help: ''
@@ -508,7 +508,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Unknown",
-  description: "Not specified or closed proprietry systems",
+  description: "Method of encrypting stored data not specified or closed proprietry systems",
   bonus: false,
   points: -50,
   help: ''
@@ -516,7 +516,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "No encryption",
-  description: "",
+  description: "No encryption is used to protect stored data",
   bonus: false,
   points: -50,
   help: ''
@@ -524,7 +524,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Obfuscation",
-  description: "E.g. base64 or proprietry method",
+  description: "Stored data is only obfuscated (e.g. base64 or proprietry method)",
   bonus: false,
   points: -50,
   help: ''
@@ -532,7 +532,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Weak encryption",
-  description: "E.g. DES",
+  description: "A weak encryption system is used to protect stored data (e.g DES)",
   bonus: false,
   points: -25,
   help: ''
@@ -540,7 +540,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Strong encrpytion",
-  description: "E.g. AES-256",
+  description: "A strong encryption system is used to protect stored data (e.g. AES-256)",
   bonus: false,
   points: 50,
   help: ''
@@ -557,7 +557,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not applicable",
-  description: "",
+  description: "Data retention period is not applicable",
   bonus: false,
   points: 0,
   help: ''
@@ -565,7 +565,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not specified",
-  description: "",
+  description: "Data is retained for an unspecified amount of time",
   bonus: false,
   points: -50,
   help: ''
@@ -573,7 +573,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Indefinitely",
-  description: "",
+  description: "Data is retained indefinitely",
   bonus: false,
   points: -50,
   help: ''
@@ -581,7 +581,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "2+ years",
-  description: "",
+  description: "Data is retained for 2 or more years",
   bonus: false,
   points: -20,
   help: ''
@@ -589,7 +589,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "0 to 2 years",
-  description: "",
+  description: "Data is retained for up to 2 years",
   bonus: false,
   points: -10,
   help: ''
@@ -597,7 +597,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Less than 1 day",
-  description: "",
+  description: "Data is retained for less than a day",
   bonus: false,
   points: 0,
   help: ''
@@ -605,7 +605,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Temporary (cache)",
-  description: "",
+  description: "Data is only held temporarily (e.g. in memory)",
   bonus: false,
   points: 0,
   help: ''
@@ -613,7 +613,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "User controlled",
-  description: "",
+  description: "Use is able to control the data retention period",
   bonus: false,
   points: 10,
   help: ''
@@ -630,7 +630,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not applicable",
-  description: "",
+  description: "Data scope is not applicable",
   bonus: false,
   points: 0,
   help: ''
@@ -638,15 +638,31 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Unspecified",
-  description: "",
+  description: "Types of data stored is unspecified",
   bonus: false,
   points: -50,
   help: ''
 )
 ReportChoice.create(
   report_item_id: item.id, 
+  name: "Personal",
+  description: "Types of data stored includes personal information (e.g. address)",
+  bonus: true,
+  points: -10,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Financial",
+  description: "Types of data stored includes financial information (e.g. credit card details)",
+  bonus: true,
+  points: -10,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
   name: "User activity",
-  description: "",
+  description: "Types of data stored includes user activity (e.g. browsing habbits)",
   bonus: true,
   points: -10,
   help: ''
@@ -654,7 +670,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "User generated content",
-  description: "",
+  description: "Types of data stored includes user generated content (e.g. uploaded images)",
   bonus: true,
   points: 0,
   help: ''
@@ -679,7 +695,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "No documentation",
-  description: "No documentation is publicly available",
+  description: "No documentation for data in motion is publicly available",
   bonus: false,
   points: -50,
   help: ''
@@ -687,7 +703,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Basic documentation",
-  description: "Has some documentation but doesn not go into details",
+  description: "Has some documentation for data in motion, but does not go into details",
   bonus: false,
   points: -10,
   help: ''
@@ -695,7 +711,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "High-level overview",
-  description: "Provides a high-level overview but does not contain technical details",
+  description: "Provides a high-level overview of data in motion but does not contain technical details",
   bonus: false,
   points: 0,
   help: ''
@@ -703,7 +719,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Detailed technical documentation",
-  description: "Has well detailed technical design and implementation documentation",
+  description: "Has well detailed technical design and implementation documentation for data in motion",
   bonus: false,
   points: 25,
   help: ''
@@ -711,7 +727,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Support documentation",
-  description: "Only has basic help or support documentation",
+  description: "Only has basic help or support documentation for data in motion",
   bonus: true,
   points: 5,
   help: ''
@@ -728,7 +744,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not applicable",
-  description: "",
+  description: "Transport encryption is not applicable",
   bonus: false,
   points: 0,
   help: ''
@@ -736,7 +752,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Unknown",
-  description: "Not specified or closed proprietry systems",
+  description: "Transport encryption method Not specified or uses closed proprietry systems",
   bonus: false,
   points: -50,
   help: ''
@@ -744,7 +760,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "No encryption",
-  description: "",
+  description: "No transport encryption is used",
   bonus: false,
   points: -50,
   help: ''
@@ -752,7 +768,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Obfuscation",
-  description: "E.g. base64 or proprietry method",
+  description: "Obfuscation is the only means of protecting data transport",
   bonus: false,
   points: -50,
   help: ''
@@ -760,7 +776,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Weak encryption",
-  description: "E.g. DES",
+  description: "Weak encryption is the only means of protecting data transport (e.g. 3DES)",
   bonus: false,
   points: -25,
   help: ''
@@ -768,7 +784,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Strong encrpytion",
-  description: "E.g. AES-256",
+  description: "Strong encryption is used to protect the data ransport (e.g. AES-256)",
   bonus: false,
   points: 50,
   help: ''
@@ -779,37 +795,37 @@ ReportChoice.create(
 
 item = ReportItem.create(
     report_category_id: category.id, 
-    name: 'SSL/TLS usage',
+    name: 'Qualys SSL/TLS score',
     help: ''
 )
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not applicable",
-  description: "",
+  description: "Service does not publicly use TLS so not applicable",
   bonus: false,
   points: 0,
   help: ''
 )
 ReportChoice.create(
   report_item_id: item.id, 
-  name: "Qualsys SSL Labs Score D or worse",
-  description: "",
+  name: "Qualys SSL Labs score D or worse",
+  description: "Received a Qualys SSL Labs score of D or worse",
   bonus: false,
   points: -50,
   help: ''
 )
 ReportChoice.create(
   report_item_id: item.id, 
-  name: "Qualsys SSL Labs Score B or C",
-  description: "",
+  name: "Qualys SSL Labs score B or C",
+  description: "Received a Qualys SSL Labs score of B or C",
   bonus: false,
   points: 0,
   help: ''
 )
 ReportChoice.create(
   report_item_id: item.id, 
-  name: "Qualsys SSL Labs Score A",
-  description: "",
+  name: "Qualys SSL Labs score A",
+  description: "Received a Qualys SSL Labs score of A",
   bonus: false,
   points: 10,
   help: ''
@@ -834,7 +850,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not applicable",
-  description: "",
+  description: "A privacy policy is not applicable",
   bonus: false,
   points: 0,
   help: ''
@@ -842,7 +858,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not available",
-  description: "",
+  description: "A privacy policy is not publicly available",
   bonus: false,
   points: -10,
   help: ''
@@ -850,7 +866,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Available but hard to find",
-  description: "",
+  description: "The privacy policy is available, but hard to find",
   bonus: false,
   points: -5,
   help: ''
@@ -858,7 +874,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Available and easy to find",
-  description: "",
+  description: "The privacy policy is available and easy to find",
   bonus: false,
   points: 10,
   help: ''
@@ -875,7 +891,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not applicable",
-  description: "",
+  description: "A EULA is not applicable",
   bonus: false,
   points: 0,
   help: ''
@@ -883,7 +899,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not available",
-  description: "",
+  description: "The EULA is not publicly available",
   bonus: false,
   points: -10,
   help: ''
@@ -891,7 +907,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Available but hard to find",
-  description: "",
+  description: "The EULA is available, but hard to find",
   bonus: false,
   points: -5,
   help: ''
@@ -899,7 +915,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Available and easy to find",
-  description: "",
+  description: "The EULA is available and easy to find",
   bonus: false,
   points: 10,
   help: ''
@@ -911,22 +927,131 @@ item = ReportItem.create(
     name: 'Sales and Marketing',
     help: ''
 )
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Not applicable",
+  description: "Sales and marketing data collection not applicable",
+  bonus: false,
+  points: 0,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Unknown",
+  description: "Use of personal data for internal sales and marketing is unknown",
+  bonus: false,
+  points: -50,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Collected",
+  description: "Collects personal information for internal sales or marketing purposes",
+  bonus: false,
+  points: -5,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Not collected",
+  description: "Does not collect personal information for internal sales or marketing purposes",
+  bonus: false,
+  points: 10,
+  help: ''
+)
+
+
 item = ReportItem.create(
     report_category_id: category.id, 
     name: 'Third parties',
     help: ''
 )
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Not applicable",
+  description: "Third party data sharing not applicable",
+  bonus: false,
+  points: 0,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Unknown",
+  description: "Unknown whether personal information is provided to third parties",
+  bonus: false,
+  points: -50,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Shared",
+  description: "Shares personal information with third parties",
+  bonus: false,
+  points: -10,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Sold",
+  description: "Sells personal information to third parties",
+  bonus: false,
+  points: -10,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Not shared",
+  description: "Does not share personal information with third parties",
+  bonus: false,
+  points: 10,
+  help: ''
+)
+
+
+
 item = ReportItem.create(
     report_category_id: category.id, 
     name: 'Data analytics',
     help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Not applicable",
+  description: "Data analytics not applicable",
+  bonus: false,
+  points: 0,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Unknown",
+  description: "Unknown whether data is collected for analytics",
+  bonus: false,
+  points: -50,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Tracking information",
+  description: "Uses tracking information for data analytics",
+  bonus: false,
+  points: -10,
+  help: ''
+)
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Does not track",
+  description: "Does not track for data analytics",
+  bonus: false,
+  points: 10,
+  help: ''
 )
 
 
 
 category = ReportCategory.create(
     name: 'Disclosure',
-    description: 'Many services have a support support channel that users can use to report problems with the product, service or website. However, not many services make it clear how to raise security issues to them nor do they tend to outline how security reports are handled. A disclosure policy outlines how security problems should be raised, what the expecations are for handling the problems and may outline time frames etc.',
+    description: 'Many services have a support support channel that users can use to report problems with the product, service or website. However, not many services make it clear how to raise security issues to them nor do they tend to outline how security reports are handled. A disclosure policy outlines how security problems should be raised, what the expecations are for handling the problems and may outline timeframes etc.',
     icon_url: 'icons/Users-Talk-icon.png'
 )
 
@@ -942,7 +1067,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not available",
-  description: "",
+  description: "A disclosure policy is not available",
   bonus: false,
   points: -10,
   help: ''
@@ -950,7 +1075,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Available but hard to find",
-  description: "",
+  description: "A disclosure policy is available, but hard to find",
   bonus: false,
   points: -5,
   help: ''
@@ -958,7 +1083,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Available and easy to find",
-  description: "",
+  description: "A disclosure policy is available and is easy to find",
   bonus: false,
   points: 10,
   help: ''
@@ -973,7 +1098,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not available",
-  description: "",
+  description: "No security contact details are documented",
   bonus: false,
   points: -10,
   help: ''
@@ -981,7 +1106,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Available but hard to find",
-  description: "",
+  description: "Security contact details are available but are hard to find",
   bonus: false,
   points: -5,
   help: ''
@@ -989,7 +1114,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Available and easy to find",
-  description: "",
+  description: "Security contact details are available and are easy to find",
   bonus: false,
   points: 10,
   help: ''
@@ -1197,6 +1322,7 @@ ReportChoice.create(
   help: ''
 )
 
+
 item = ReportItem.create(
     report_category_id: category.id, 
     name: 'Recent Events',
@@ -1205,10 +1331,47 @@ item = ReportItem.create(
 
 ReportChoice.create(
   report_item_id: item.id, 
-  name: "Not applicable",
-  description: "",
+  name: "None",
+  description: "There have been no known security incidents",
   bonus: false,
   points: 0,
+  help: ''
+)
+
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Previous minor incident",
+  description: "There have been one or more minor security incidents prior to the last 6 months",
+  bonus: false,
+  points: -10,
+  help: ''
+)
+
+
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Recent minor incident",
+  description: "There have been one or more minor security incidents within the last 6 months",
+  bonus: false,
+  points: -20,
+  help: ''
+)
+
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Previous major incident",
+  description: "There have been one or more major security incidents prior to the last 6 months",
+  bonus: false,
+  points: -20,
+  help: ''
+)
+
+ReportChoice.create(
+  report_item_id: item.id, 
+  name: "Recent major incident",
+  description: "There have been one or more major security incidents within the last 6 months",
+  bonus: false,
+  points: -40,
   help: ''
 )
 
@@ -1230,7 +1393,7 @@ item = ReportItem.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Not applicable",
-  description: "Service does not have client software.",
+  description: "Service does not have client software",
   bonus: false,
   points: 0,
   help: ''
@@ -1239,7 +1402,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "None",
-  description: "No known client software vulnerabilities at present.",
+  description: "No known client software vulnerabilities at present",
   bonus: false,
   points: 0,
   help: ''
@@ -1248,7 +1411,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Previous vulnerabilities",
-  description: "Client software has previously had known serious vulnerabilties but patches are available.",
+  description: "Client software has previously had known serious vulnerabilties but patches are available",
   bonus: false,
   points: -10,
   help: ''
@@ -1258,7 +1421,7 @@ ReportChoice.create(
 ReportChoice.create(
   report_item_id: item.id, 
   name: "Unpatched vulnerabilties",
-  description: "Client software currently has unpatched serious known vulnerabilities.",
+  description: "Client software currently has unpatched serious known vulnerabilities",
   bonus: false,
   points: -50,
   help: ''
