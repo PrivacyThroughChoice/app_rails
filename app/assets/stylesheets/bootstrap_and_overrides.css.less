@@ -29,7 +29,8 @@
 // Example:
 // @linkColor: #ff0000;
 
-@ptcGreen: #009A31;
+//@ptcGreen: #009A31;
+@ptcGreen: #8AD53D;
 @linkColor: @ptcGreen;
 
 @dropdownLinkBackgroundHover: @ptcGreen;
@@ -45,7 +46,7 @@
 
 // Adjust the padding for the top bar
 body {
-  padding-top: 60px;
+  padding-top: 75px;
   padding-bottom: 60px;
 }
 
@@ -69,6 +70,8 @@ input.edit-btn-large {
 }
 
 .summary {
+  //background-color: @ptcGreen;
+  background-color: #FFF;
   border: 2px dashed #e0e0e0;
   padding: 10px;
 }
@@ -119,7 +122,7 @@ a.btn-primary:visited { color: #fff; }
 
 .muted a { color: #999999; }
 .muted a:visited { color: #999999; }
-.muted a:hover { color: #FFF; }
+.muted a:hover { color: #000; }
 
 .css1 { font-size: 1.0em; }
 .css2 { font-size: 1.2em; }
@@ -131,6 +134,19 @@ a.btn-primary:visited { color: #fff; }
   font-weight: bold;
 }
 
+.gwell {
+  background-color: @ptcGreen;
+  border: 2px dashed #e0e0e0;
+}
+
+.gwell h1 {
+  color: #FFF;
+  font-family: 'SketchMe';
+}
+.gwell a { color: #FFF; } 
+.gwell a:hover { color: #000 }
+.gwell a:visited { color: #666 }
+
 .twell {
   background-color: white;
   border: 2px dashed #e0e0e0;
@@ -138,3 +154,8 @@ a.btn-primary:visited { color: #fff; }
   min-height: 200px;
 }
 
+/*
+.progress {
+  background-image: linear-gradient(to bottom, #CCC, #EEE);
+}
+*/
